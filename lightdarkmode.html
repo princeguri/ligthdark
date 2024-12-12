@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lightdarkmode</title>
+    <link rel="stylesheet" href="lightdarkmode.css">
+</head>
+<style>
+    /* #box3 {
+        border: 1px solid black;
+        height: 100px;
+        background-color: antiquewhite;
+    }
+    #box3.click1{
+        background-color: blue;
+    }
+    
+
+    .click {
+        background-color: aqua;
+    } */
+</style>
+
+<body id="body">
+    <div>
+        <div id="box1">
+            <label for="">check</label><input id="checkbox1" type="checkbox">
+        </div>
+        <h1>this is heading</h1>
+        <div id="box2">
+            <label for="">checkbox</label><input id="checkbox2" type="checkbox">
+        </div>
+        <div id="box3">
+            <h1>this is a heading</h1>
+        </div>
+    </div>
+    <script>
+        let secondbox2=JSON.parse(localStorage.getItem("data2"))
+        let secondbox1=JSON.parse(localStorage.getItem("data"))
+        let a=document.getElementById("box3")
+        if(secondbox1){
+            document.body.classList.add("click");
+            checkbox1.checked = true;
+        }
+
+        if(secondbox2){
+            a.classList.add("click1")
+            checkbox2.checked= true
+        }
+
+        document.getElementById("checkbox1").addEventListener("change", function() {
+            
+            if (checkbox1.checked) {
+                document.body.classList.add("click")
+                localStorage.setItem("data",true)
+            } else {
+                document.body.classList.remove("click")
+                localStorage.setItem("data",false)
+            }
+            
+
+        })
+        
+        document.getElementById("checkbox2").addEventListener("change", function () {
+            
+            if (checkbox2.checked) {
+                a.classList.add("click1")
+                localStorage.setItem("data2",true)
+                
+            } else {
+                a.classList.remove("click1")
+                localStorage.setItem("data2",false)
+            }
+
+        })
+    </script>
+</body>
+
+</html>

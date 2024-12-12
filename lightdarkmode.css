@@ -1,0 +1,13 @@
+#box3 {
+    border: 1px solid black;
+    height: 100px;
+    background-color: antiquewhite;
+}
+#box3.click1{
+    background-color: blue;
+}
+
+
+.click {
+    background-color: aqua;
+}
